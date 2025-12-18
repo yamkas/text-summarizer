@@ -23,3 +23,269 @@ TypeError: DataIngestionPipeline.__init__() missing 1 required positional argume
 [2025-12-05 19:23:46,962: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
 
 x==========x]
+[2025-12-15 15:17:21,268: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-15 15:17:21,284: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-15 15:17:21,300: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-15 15:17:21,302: INFO: common: created directory at: artifacts]
+[2025-12-15 15:17:21,302: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-15 15:17:21,305: INFO: data_ingestion: File already exits]
+[2025-12-15 15:17:21,493: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-15 15:17:21,493: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-15 15:17:21,493: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-15 15:17:21,493: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-15 15:17:21,504: INFO: common: created directory at: artifacts]
+[2025-12-15 15:17:21,505: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-15 15:17:35,419: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 14:57:15,768: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 14:57:15,775: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 14:57:15,791: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 14:57:15,791: INFO: common: created directory at: artifacts]
+[2025-12-17 14:57:15,791: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 14:57:15,791: INFO: data_ingestion: File already exits]
+[2025-12-17 14:57:16,011: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 14:57:16,011: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 14:57:16,020: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 14:57:16,021: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 14:57:16,021: INFO: common: created directory at: artifacts]
+[2025-12-17 14:57:16,021: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 14:57:20,561: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 14:57:20,566: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 14:57:20,573: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 14:57:20,573: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 14:57:20,573: INFO: common: created directory at: artifacts]
+[2025-12-17 14:57:20,573: ERROR: main: "'ConfigBox' object has no attribute 'trainingarguments'"]
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'TrainingArguments'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TrainingArguments'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TrainingArguments'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TrainingArguments'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'trainingarguments'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'trainingarguments'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'trainingarguments'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\MLOps\textsummarizer\text-summarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\pipeline\stage_3_model_trainer.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\config\configuration.py", line 63, in get_model_trainer_config
+    params=self.params.TrainingArguments
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'trainingarguments'"
+[2025-12-17 15:11:28,219: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 15:11:28,226: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:11:28,235: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:11:28,236: INFO: common: created directory at: artifacts]
+[2025-12-17 15:11:28,237: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 15:11:28,238: INFO: data_ingestion: File already exits]
+[2025-12-17 15:11:28,392: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:11:28,394: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 15:11:28,399: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:11:28,402: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:11:28,404: INFO: common: created directory at: artifacts]
+[2025-12-17 15:11:28,405: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 15:11:32,192: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:11:32,193: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 15:11:32,198: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:11:32,200: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:11:32,201: INFO: common: created directory at: artifacts]
+[2025-12-17 15:11:32,205: INFO: common: created directory at: artifacts/model_trainer]
+[2025-12-17 15:11:36,863: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-12-17 15:18:12,475: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-12-17 15:18:20,394: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\MLOps\textsummarizer\text-summarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\pipeline\stage_3_model_trainer.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-12-17 15:42:11,222: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 15:42:11,227: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:42:11,229: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:42:11,229: INFO: common: created directory at: artifacts]
+[2025-12-17 15:42:11,229: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 15:42:11,229: INFO: data_ingestion: File already exits]
+[2025-12-17 15:42:11,391: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:42:11,391: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 15:42:11,400: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:42:11,400: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:42:11,400: INFO: common: created directory at: artifacts]
+[2025-12-17 15:42:11,400: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 15:42:14,580: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:42:14,580: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 15:42:14,590: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:42:14,592: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:42:14,592: INFO: common: created directory at: artifacts]
+[2025-12-17 15:42:14,592: INFO: common: created directory at: artifacts/model_trainer]
+[2025-12-17 15:42:29,643: ERROR: main: Seq2SeqTrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\MLOps\textsummarizer\text-summarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\pipeline\stage_3_model_trainer.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = Seq2SeqTrainingArguments(
+TypeError: Seq2SeqTrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-12-17 15:45:03,932: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 15:45:03,937: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:45:03,941: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:45:03,941: INFO: common: created directory at: artifacts]
+[2025-12-17 15:45:03,942: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 15:45:03,942: INFO: data_ingestion: File already exits]
+[2025-12-17 15:45:04,053: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:45:04,053: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 15:45:04,056: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:45:04,058: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:45:04,059: INFO: common: created directory at: artifacts]
+[2025-12-17 15:45:04,060: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 15:45:06,555: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:45:06,556: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 15:45:06,558: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:45:06,561: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:45:06,561: INFO: common: created directory at: artifacts]
+[2025-12-17 15:45:06,563: INFO: common: created directory at: artifacts/model_trainer]
+[2025-12-17 15:45:17,447: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\MLOps\textsummarizer\text-summarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\pipeline\stage_3_model_trainer.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-12-17 15:49:07,705: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 15:49:07,705: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:49:07,705: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:49:07,705: INFO: common: created directory at: artifacts]
+[2025-12-17 15:49:07,705: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 15:49:07,717: INFO: data_ingestion: File already exits]
+[2025-12-17 15:49:07,835: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:49:07,835: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 15:49:07,838: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:49:07,838: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:49:07,838: INFO: common: created directory at: artifacts]
+[2025-12-17 15:49:07,842: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 15:49:10,591: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:49:10,592: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 15:49:10,596: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:49:10,598: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:49:10,598: INFO: common: created directory at: artifacts]
+[2025-12-17 15:49:10,600: INFO: common: created directory at: artifacts/model_trainer]
+[2025-12-17 15:49:22,551: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "C:\MLOps\textsummarizer\text-summarizer\main.py", line 33, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\pipeline\stage_3_model_trainer.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\MLOps\textsummarizer\text-summarizer\src\textSummarizer\components\model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-12-17 15:52:27,915: INFO: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-12-17 15:52:27,920: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:52:27,924: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:52:27,927: INFO: common: created directory at: artifacts]
+[2025-12-17 15:52:27,928: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-12-17 15:52:27,928: INFO: data_ingestion: File already exits]
+[2025-12-17 15:52:28,032: INFO: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:52:28,032: INFO: main: >>>>>> stage Data Transformation Stage started <<<<<<]
+[2025-12-17 15:52:28,035: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:52:28,037: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:52:28,037: INFO: common: created directory at: artifacts]
+[2025-12-17 15:52:28,039: INFO: common: created directory at: artifacts/data_transformation]
+[2025-12-17 15:52:32,416: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<
+
+x==========x]
+[2025-12-17 15:52:32,416: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-12-17 15:52:32,418: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-17 15:52:32,418: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-17 15:52:32,418: INFO: common: created directory at: artifacts]
+[2025-12-17 15:52:32,418: INFO: common: created directory at: artifacts/model_trainer]
+[2025-12-17 17:10:49,768: INFO: main: >>>>>> stage Model Trainer Stage completed <<<<<<
+
+x==========x]
+[2025-12-18 14:31:29,393: INFO: server: Started server process [18020]]
+[2025-12-18 14:31:29,394: INFO: on: Waiting for application startup.]
+[2025-12-18 14:31:29,395: INFO: on: Application startup complete.]
+[2025-12-18 14:31:29,396: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-12-18 14:33:43,719: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-18 14:33:43,730: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-18 14:33:43,732: INFO: common: created directory at: artifacts]
+[2025-12-18 14:33:43,733: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-12-18 14:38:10,339: INFO: server: Shutting down]
+[2025-12-18 14:38:10,448: INFO: on: Waiting for application shutdown.]
+[2025-12-18 14:38:10,449: INFO: on: Application shutdown complete.]
+[2025-12-18 14:38:10,450: INFO: server: Finished server process [18020]]
+[2025-12-18 14:42:45,023: INFO: main: >>>>>> stage Model Evaluation Stage started <<<<<<]
+[2025-12-18 14:42:45,028: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-12-18 14:42:45,035: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-12-18 14:42:45,036: INFO: common: created directory at: artifacts]
+[2025-12-18 14:42:45,037: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-12-18 14:46:45,608: INFO: rouge_scorer: Using default tokenizer.]
+[2025-12-18 14:46:45,980: INFO: main: >>>>>> stage Model Evaluation Stage completed <<<<<<
+
+x==========x]
